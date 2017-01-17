@@ -2,7 +2,7 @@
 app.controller("productVC",function($scope,$http,$rootScope){
 	$http({
 		method:"GET",
-		url:"http://ayuxinyi.github.io/shop/php/product.php",
+		url:"https://ayuxinyi.github.io/shop/php/product.php",
 	}).then(function(response){
 //		console.log(response.data);
 		$scope.products = response.data;
