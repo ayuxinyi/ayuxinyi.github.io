@@ -1,0 +1,20 @@
+<div ng-controller="productVC">
+			<div class="row">
+				<div class="col-md-3">
+					<button class="btn btn-lg btn-block btn-default" ng-click="findCategory('全部')" ng-class="classOfCategory('全部')">全部</button>
+					<button class="btn btn-lg btn-block btn-default" ng-click="findCategory(p.category)" ng-class="classOfCategory(p.category)" ng-repeat="p in products | unique:'category'">{{p.category}}</button>
+				</div>
+				<div class="col-md-9">
+					<div class="well" ng-repeat="p in pageProducts">
+						<h3>{{p.name}}<span class="pull-right label label-primary">{{p.price | currency:"¥"}}</span></h3>
+						<a href="#/products" class="pull-right btn btn-success" ng-click="addToCar(p)">加入购物车</a>
+						<p class="lead">{{p.description}}</p>
+					</div>
+					
+					<!--分页按钮-->
+					<div class="pull-right btn-group">
+						<button class="btn btn-default" ng-repeat="p in pagesArray" ng-click="productsPerPage(p)" ng-class="classOfPage(p)">{{p}}</button>
+					</div>
+				</div>
+			</div>
+		</div>
