@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	.d1{
+		width:300px;
+		height:300px;
+		position: relative;
+		margin:200px auto;
+	transform-style: preserve-3d;
+	transform: rotateY(-20deg) rotateX(20deg);
+	animation:kuai 10s linear infinite;
+	opacity: .6;
+	}
+	img{
+		box-shadow: 5px 5px 400px yellow;
+	}
+	.d1 div{
+			width:300px;
+			height: 300px;
+			position: absolute;
+	}
+	.top{
+		background-color:red;
+		transform: rotateX(90deg) translateZ(150px);
+
+	}
+	.bottom{
+		background-color:green;
+		transform: rotateX(-90deg) translateZ(150px);
+	}
+	.left {
+		background-color:blue;
+		transform: rotateY(-90deg) translateZ(150px);
+
+	}
+	.right{
+		background-color:black;
+		transform: rotateY(90deg) translateZ(150px);
+
+	}
+	.front{
+		background-color:purple;
+		transform: translateZ(150px);
+
+	}
+	.back{
+		background-color:pink;
+		transform: rotateY(180deg) translateZ(150px);
+	}
+	@keyframes kuai{
+		from{
+			transform: rotateY(0deg) rotateX(20deg);
+		}
+		to{
+			transform: rotateY(360deg) rotateX(20deg);
+		}
+	}
+	</style>
+
+</head>
+<body>
+<div>
+	<div class="d1">
+		<div class="top"><img src="dog.jpeg"></div>
+		<div class="bottom"><img src="dog.jpeg"></div>
+		<div class="left"><img src="dog.jpeg"></div>
+		<div class="right"><img src="dog.jpeg"></div>
+		<div class="front"><img src="dog.jpeg"></div>
+		<div class="back"><img src="dog.jpeg"></div>
+	</div>
+</body>
+</html>
