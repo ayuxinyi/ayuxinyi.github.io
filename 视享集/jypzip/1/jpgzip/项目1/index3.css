@@ -1,0 +1,21 @@
+#slider{width:300px;height:100%;position:fixed;top:0;left:-260px;background:rgb(239,239,239);transition:all 0.1s ease-out;cursor: pointer;}
+#slider #Cases h3{position:absolute;top:160px;left:80px;font-size:18px;color:black;font-weight:700;}
+#slider #Cases #CasesMenue{position:absolute;top:200px;left:100px;}
+#slider #Cases #CasesMenue li,#slider #Contact #ContactMenue li{color:rgb(180,180,180);list-style:none;margin-bottom:20px;width:240px;height:15px;font-size:15px;font-weight:400;}
+#slider #Contact #ContactMenue{position:absolute;top:350px;left:100px;}
+#slider #Cases #CasesMenue .active{color:black;width:200px;text-align:center;}
+#slider #Contact #ContactMenue .active{text-align:center;width:200px;}
+#slider #Contact #ContactMenue .active a{color:black;}
+a:hover{text-decoration: none;color:black;}
+a:visited{color:rgb(180,180,180);}
+a:active{color:black);}
+#body #slider .clearfix{animation:bian 1s linear forwards;}
+#body #slider .active{animation:init 1s linear forwards;}
+@keyframes bian{
+	0%{background:rgb(180,180,180)}
+	100%{background:rgb(239,239,239);}
+}
+@keyframes init{
+	0%{background:rgb(239,239,239);}
+	100%{background:rgb(180,180,180);}
+}

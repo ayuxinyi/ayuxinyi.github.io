@@ -1,0 +1,22 @@
+body,html{width:100%;height:100%;background:rgb(247,247,247);}
+#slider{width:300px;height:100%;position:fixed;top:0;left:-260px;background:rgb(239,239,239);transition:all 0.1s ease-out;cursor: pointer;}
+#slider #Cases h3{position:absolute;top:160px;left:80px;font-size:18px;color:black;font-weight:700;}
+#slider #Cases #CasesMenue{position:absolute;top:200px;left:100px;}
+#slider #Cases #CasesMenue li,#slider #Contact #ContactMenue li{color:rgb(180,180,180);list-style:none;margin-bottom:20px;width:240px;height:15px;font-size:15px;font-weight:400;}
+#slider #Contact #ContactMenue{position:absolute;top:350px;left:100px;}
+#slider #Cases #CasesMenue .active{color:black;}
+#slider #Contact #ContactMenue .active a{color:black;}
+#TextWrap{width:100%;position:absolute;top:0;left:40px;}
+#TextWrap div{width:340px;height:128px;background:white;text-align:center;}
+#TextWrap div h3{font-size:15px;font-weight:500;color:black;line-height:16px;margin:25px 0;cursor:pointer;}
+#TextWrap div p{font-size:12px;font-weight:400;color:black;margin:18px 0;line-height:16px;}
+#section1{position:absolute;top:0;left:0;}
+#section2{position:absolute;top:0;left:350px;}
+#section3{position:absolute;top:0;left:700px;}
+#section1 .Tittle{font-weight:800;color:red;}
+#section2 .Tittle{font-weight:800;color:red;}
+#section3 .Tittle{font-weight:800;color:red;}
+a:hover{text-decoration: none;color:black;}
+a:visited{color:rgb(180,180,180);}
+a:link{color:rgb(180,180,180);}
+

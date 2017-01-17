@@ -1,0 +1,18 @@
+#slider{width:300px;height:100%;position:fixed;top:0;left:-260px;background:rgb(239,239,239);transition:all 0.1s ease-out;cursor: pointer;}
+#slider #Cases h3{position:absolute;top:160px;left:80px;font-size:18px;color:black;font-weight:700;}
+#slider #Cases #CasesMenue{position:absolute;top:200px;left:100px;}
+#slider #Cases #CasesMenue li,#slider #Contact #ContactMenue li{color:rgb(180,180,180);list-style:none;margin-bottom:20px;width:240px;height:15px;font-size:15px;font-weight:400;}
+#slider #Contact #ContactMenue{position:absolute;top:350px;left:100px;}
+#slider #Cases #CasesMenue .active{color:black;}
+#slider #Contact #ContactMenue .active a{color:black;}
+a:hover{text-decoration: none;color:black;}
+a:visited{color:rgb(180,180,180);}
+a:active{color:black);}
+#ServiceWrap{transition:all 0.1s ease-out;cursor: pointer;width:100%;}
+h1{font-size: 25px;line-height:48px;margin-left: 40px;font-weight:400;color:#999794;margin-top:40px;}
+#ServiceWrap #content #contentMenue{width:100%;height:40px;}
+#ServiceWrap #content #contentMenue li{float:left;width:135px;height:18px;list-style:none;display:inline-block;color:rgb(180,180,180);font-size:12px;vertical-align:top;margin-right:20px;line-height:13px;}
+#ServiceWrap #content #contentMenue #ConentAbout:hover{color:black;}
+#ServiceWrap #content #contentMenue #People:hover{color:black;}
+table{width:93%;border:1px solid #e9e9e9;border-collapse:collapse;border-spacing: 0;margin-top:20px;box-sizing:border-box;}
+td{min-height:41px;padding:10px 14px 8px;border-right: 1px solid #e9e9e9;}

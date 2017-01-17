@@ -1,0 +1,91 @@
+<?php 
+//1.链接数据库
+function connect($host=DB_HOST,$user=DB_USER,$password=DB_PASSWORD,$database=DB_DATABASE,$port=DB_PORT){
+	//"服务器主机名","用户名","用户密码","数据库","端口号"
+	$link =@mysqli_connect($host,$user,$password,$database,$port);
+	if(mysqli_connect_errno()){
+		exit(mysqli_connect_errno());
+	}
+	mysqli_set_charset($link,'utf8');
+	return $link;
+}
+//2.执行一条sql语句,返回结果是对象或者返回布尔值
+function execute($link,$query){
+	$result = mysqli_query($link,$query);
+	// var_dump(mysqli_errno($link));
+	// var_dump(mysqli_error($link));
+	if(mysqli_error($link)){
+		exit(mysqli_error($link));
+	}
+	return $result;
+}
+
+//3.执行一条sql语句,只返回布尔值
+function execute_boll($link,$query){
+	$bool = mysqli_real_query($link,$query);
+	if(mysqli_error($bool)){
+		exit(mysqli_error($bool));
+	}
+	return $bool;
+}
+//使用案例
+// $arr_sqls = array(
+// 	'SELECT * from user',
+// 	'SELECT * from user1',
+// 	'SELECT * from user1',
+// 	'SELECT * from user1'
+// 	);
+// var_dump(execute_multi($link,$arr_sqls,$error));
+// echo $error;
+//4.一次性执行多条sql语句
+function execute_multi($link,$arr_sqls,&$error){
+	$sqls = implode(';',$arr_sqls).';';
+	if(mysqli_multi_query($link,$sqls)){
+		$data = array();
+		$i = 0;//计数
+		do {
+			if($result = mysqli_store_result($link)){
+				$data[$i]=mysqli_fetch_all($result);
+			}else{
+				$data[$i] = null;
+			}
+			$i++;
+			if(!mysqli_more_results($link)) break;
+
+		}while(mysqli_next_result($link));
+		if($i == count($arr_sqls)){
+			return $data;
+		}else{
+			$error = "sql语句执行失败:<br />&nbsp;数组下标为{$i}的语句:{$arr_sqls[$i]}执行错误<br />&nbsp;错误原因:".mysqli_error($link);
+			return false;
+		}
+	}else{
+		$error = "执行失败!请检查首条语句是否正确!<br />可能的错误原因:".mysqli_error($link);
+	}
+}
+//5.获取记录值
+function num($link,$sql_count){
+	$result = execute($link,$sql_count);
+	$count = mysqli_fetch_row($result);
+	return $count[0];
+}
+//6.数据入库之前进行转义,确保数据能够顺利的入库
+
+
+//7.关闭与数据库的链接
+function close($link){
+	mysql_close($link);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+ ?>

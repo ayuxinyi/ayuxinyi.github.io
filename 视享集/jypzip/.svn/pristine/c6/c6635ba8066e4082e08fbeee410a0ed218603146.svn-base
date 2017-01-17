@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>视享集-SXJ Studios 提供最优秀的视觉&交互方案 (电商设计/企业建站/移动端界面设计/创意广告)</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/page02.css">
+</head>
+<body>
+	<div id="windowloading">
+		<div id="wld">
+			<img src="img/loading.gif">
+			<div id="percent">0</div>
+		</div>
+	</div>
+	<div id="body" style="display: none;">
+		<div id="homepage">
+			<div id="logo"><img src="imgday/logo.png"></div>
+			<!-- logo -->
+			<div class="pagebox" id="page01">
+				<div class="pageContainer">
+					<ul id="scene" class="layerbox">
+						<li id="layer01">
+							<div class="imgContainer1">
+								<img src="imgday/page1_01.png" class="page01Img" style="top: 102px;left: 540px;">
+							</div>
+						</li>
+						<li id="layer02" class="layerP01">
+							<div class="imgContainer1">
+								<img src="imgday/page1_02.png" class="page01Img" style="top: 172px;left: 600px;margin-left: -118px;">
+							</div>
+						</li>
+						<li id="layer03" class="layerP01">
+							<div id="imgContainer1" >
+								<img src="imgday/page1_03.png" style="margin-left: -100px">
+							</div>
+						</li>
+						<li id="layer04" class="layerP01">
+							<div class="imgContainer1">
+								<img src="imgday/page1_04.png" class="page01Img" style="top: 380px;left: 1050px;">
+							</div>
+							
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- page01 -->
+			<div class="pagebox" id="page02">
+				<div class="pageContainer">
+					<ul class="layerbox">
+						<li class="layer">
+							<div class="imgContainer" style="top: 67px;left: -50px;">
+								<img src="imgday/page2_01.png">
+							</div>
+						</li>
+						<!-- page2 bg -->
+						<li class="layer">
+							<div class="imgContainer" style="left: 475px;top: 57px;opacity: 0;">
+								<img src="imgday/page2_02.png">
+							</div>
+						</li>
+						<!-- page2 logo -->
+						<li class="layer">
+							<div class="imgContainer" style="left:760px;top: 297px;opacity: 0;">
+								<img src="imgday/page2_03.png">
+							</div>
+						</li>
+						<!-- page2 airplane -->
+						<li class="layer">
+							<div class="imgContainer" style="left: 208px;width:0;top: 247px;height:158px;overflow: hidden;">
+								<img src="imgday/page2_04.png" style="position: absolute;right: 0;">
+							</div>
+						</li>
+						<!-- page2 移动端 -->
+						<li class="layer">
+							<div class="imgContainer" style="left: 475px;top: 271px;height:0;width: 93px;overflow: hidden;">
+								<img src="imgday/page2_05.png" style="position: absolute;bottom: 0;">
+							</div>
+						</li>
+						<!-- page2 电商设计 -->
+						<li class="layer">
+							<div class="imgContainer" style="left: 765px;top: 217px;width:0;height: 100px;overflow: hidden;">
+								<img src="imgday/page2_06.png" style="position: absolute;left: 0;">
+							</div>
+						</li>
+						<!-- page2 网站建设 -->
+						<li class="layer">
+							<div class="imgContainer" style="left: 800px;top: 527px;height:0;width: 131px;overflow: hidden;">
+								<img src="imgday/page2_07.png" style="position: absolute;top: 0;">
+							</div>
+						</li>
+						<!-- page2 其他服务 -->
+						<li class="layer">
+							<div class="imgContainer" style="left: 838px;top: 707px;display: none;">
+								<img src="imgday/page2_8.png">
+							</div>
+							<ul id="hoverList" class="clear">
+								<li class="page2_8"></li>
+								<li class="page2_9"></li>
+								<li class="page2_10"></li>
+							</ul>
+						</li>
+						<!-- 其他服务ll -->
+					</ul>
+				</div>
+			</div>
+			<!-- page02 -->
+			<div class="pagebox" id="page03" style="height: 999px;">
+				<div class="pageContainer">
+					<div id="page03ImgBox">
+						<a href="项目1/index1.html"><img src="imgday/page3_01.png" id="page03Img"></a>
+					</div>
+				</div>
+			</div>
+			<!-- page03 -->
+			<div class="pagebox" id="page04" style="height: 910px;">
+				<div class="pageContainer">
+					<ul class="layerbox">
+						<li class="layer">
+							<div id="page04Bulid">
+								<img src="imgday/page4_01.png">
+							</div>
+						</li>
+						<li class="layer">
+							<div class="imgContainer" id="page04House">
+								<img src="imgday/page4_02.png" class="page04Img" style="width: 1748px;height: 910px;left: -270px;">
+							</div>
+						</li>
+						<li class="layer">
+							<div class="imgContainer" id="intriduce1">
+								<img src="imgday/footer_intriduce1.png" class="page04Img"  style="left: 170px;top: 800px;opacity: 0;">
+							</div>
+						</li>
+						<li class="layer">
+							<div class="imgContainer" id="intriduce2">
+								<img src="imgday/footer_intriduce2.png" class="page04Img"  style="left: 170px;top: 900px;opacity: 0;">
+							</div>
+						</li>
+						<li class="layer">
+							<div class="imgContainer" id="intriduce3">
+								<img src="imgday/footer_intriduce3.png" class="page04Img"  style="left: 170px;top: 980px;opacity:0;">
+							</div>
+						</li>
+						<li class="layer">
+							<div id="catBox">
+								<img src="imgday/page4_03.png">
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- page04 -->
+			<div class="pagebox" id="footer" style="height: 500px;">
+				<div class="pageContainer">
+					<ul class="layerbox">
+						<li >
+							<div class="footerBox" id="footerDiv1">
+								<img src="imgday/footer_spliter1.png">
+							</div>
+						</li>
+						<li >
+							<div class="footerBox" id="footerDiv2">
+								<ul id="footer-contact" class="clear">
+									<li class="item" id="item01">
+										<a href="项目1/index1.html">
+											<img src="imgday/footer_contact.png">
+										</a>
+									</li>
+									<li class="item" id="item02">
+										<a href="项目1/index3.html">
+											<img src="imgday/footer_contact.png" style="margin-left: -140px;">
+										</a>
+									</li>
+									<li class="item" id="item03">
+										<a href="项目1/index4.html">
+											<img src="imgday/footer_contact.png" style="margin-left: -280px;">
+										</a>
+									</li>
+									<li class="item" id="item04">
+										<a href="项目1/index5.html">
+											<img src="imgday/footer_contact.png" style="margin-left: -420px;">
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li >
+							<ul id="footer-host">
+								<li class="host" id="imgday/host1_l.png" ss="imgday/host1.png">
+									<a href="https://www.behance.net/julyday"><img src="imgday/host1.png" class="hostImg"></a>
+								</li>
+								<li class="host" id="imgday/host2_l.png" ss="imgday/host2.png">
+									<a href="http://www.68design.net/u/76659/"><img src="imgday/host2.png" class="hostImg"></a>
+								</li>
+								<li  id="hostlong">
+									<a href="homepageday.html"><img src="imgday/footer_host.png" class="hostImg" ></a>
+								</li>
+								<li class="host" id="imgday/host3_l.png" ss="imgday/host3.png">
+									<a href="https://www.douban.com/accounts/login?redir=https%3A//www.douban.com/people/julyday/"><img src="imgday/host3.png" class="hostImg"></a>
+								</li>
+								<li class="host" id="imgday/host4_l.png" ss="imgday/host4.png">
+									<a href="http://www.zcool.com.cn/u/193239"><img src="imgday/host4.png" class="hostImg"></a>
+								</li>
+							</ul>
+						</li>
+						<li >
+							<div id="waveline">
+								<img src="imgday/footer_spliter2.png">
+							</div>
+						</li>
+						<li >
+							<div id="footerabout">
+								<img src="imgday/footer_about.png">
+							</div>
+							<ul id="aboutlist">
+								<a href="项目1/index3.html"><li class="aboutli"></li></a>
+								<a href="项目1/index4.html"><li class="aboutli"></li></a>
+								<a href="项目1/index5.html"><li class="aboutli"></li></a>
+								<a href="项目1/index6.html"><li class="aboutli"></li></a>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- footer -->
+		</div>
+		<div id="floatright">
+			<ul id="tools-top">
+				<li id="topOpen">
+					<a href="http://1.jypzip.applinzi.com/jpgzip/homepage.html"><img src="imgday/img05.jpg"></a>
+					<span>Day</span>
+				</li>
+				<li id="toolsMusic">
+					<img src="imgday/music_ico.gif" id="imgday/music_ico.gif" music="imgday/music_ico.png">
+				</li>
+				<audio id="jq-audio" src="http://www.jpgzip.com/music/David%20Byrne%20-%20Main%20Title%20Theme.mp3"></audio>
+			</ul>
+			<ul id="tools-middle">
+				<li class="tml">
+					<img src="imgday/floatR_item_bg.png" id="tmli1">
+				</li>
+				<li class="tml">
+					<img src="imgday/floatR_item_bg.png" id="tmli2">
+				</li>
+				<li class="tml">
+					<img src="imgday/floatR_item_bg.png" id="tmli3">
+				</li>
+				<li class="tml">
+					<img src="imgday/floatR_item_bg.png" id="tmli4">
+				</li>
+			</ul>
+			<ul id="tools-bottom">
+				<li id="tbl1">
+					<div class="tbld" style="display: block;">
+						<img src="imgday/a1.png" class ="tbldi">
+						<span class="tbsp1">Case</span>
+						<span class="tbsp2">案例</span>
+					</div>
+				</li>
+				<li class="tbl">
+					<img src="imgday/a5.png" class ="tbldi">
+					<a href="项目1/index3.html">
+						<div class="tbld" style="background-position: 0 -35px;">
+							<img src="imgday/b5.png" class ="tbldi">
+							<span class="tbsp1">Team</span>
+							<span class="tbsp2">团队</span>
+						</div>
+					</a>
+				</li>
+				<li class="tbl">
+					<img src="imgday/a2.png" class ="tbldi">
+					<a href="项目1/index4.html">
+						<div class="tbld" style="background-position: 0 -70px;">
+							<img src="imgday/b2.png" class ="tbldi">
+							<span class="tbsp1">Price</span>
+							<span class="tbsp2">报价</span>
+						</div>
+					</a>
+				</li>
+				<li class="tbl">
+					<img src="imgday/a3.png" class ="tbldi">
+					<a href="项目1/index5.html">
+						<div class="tbld" style="background-position: 0 -105px;">
+							<img src="imgday/b3.png" class ="tbldi">
+							<span class="tbsp1" style="left: 0px;-webkit-transform: scale(0.8,0.8);-moz-transform:scale(0.8,0.8);-ms-transform:scale(0.8,0.8);">Contact</span>
+							<span class="tbsp2">联系</span>
+						</div>
+					</a>
+				</li>
+				<li class="tbl">
+					<img src="imgday/a4.png" class ="tbldi">
+					<a href="项目1/index2.html">
+						<div class="tbld" style="background-position: 0 -140px;">
+							<img src="imgday/b4.png" class ="tbldi">
+							<span class="tbsp1">Blog</span>
+							<span class="tbsp2">博客</span>
+						</div>
+					</a>
+				</li>
+				<li class="tbl">
+					<img src="imgday/a6.png" class ="tbldi">
+					<a href="项目1/index6.html">
+						<div class="tbld" style="background-position: 0 -175px;">
+							<img src="imgday/b6.png" class ="tbldi">
+							<span class="tbsp1">Links</span>
+							<span class="tbsp2">友链</span>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>	
+
+
+
+	
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery1.12.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/loading.js"></script>
+<script type="text/javascript" src="js/scroll.js"></script>
+<script type="text/javascript" src="js/page02.js"></script>
+<script type="text/javascript" src="js/footer02.js"></script>

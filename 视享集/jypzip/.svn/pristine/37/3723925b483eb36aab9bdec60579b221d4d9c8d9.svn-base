@@ -1,0 +1,16 @@
+body,html{background:rgb(247,247,247);}
+#slider{width:300px;height:100%;position:fixed;top:0;left:-260px;background:rgb(239,239,239);transition:all 0.1s ease-out;cursor: pointer;}
+#slider #Cases h3{position:absolute;top:160px;left:80px;font-size:18px;color:black;font-weight:700;}
+#slider #Cases #CasesMenue{position:absolute;top:200px;left:100px;}
+#slider #Cases #CasesMenue li,#slider #Contact #ContactMenue li{color:rgb(180,180,180);list-style:none;margin-bottom:20px;width:240px;height:15px;font-size:15px;font-weight:400;}
+#slider #Contact #ContactMenue{position:absolute;top:350px;left:100px;}
+#slider #Cases #CasesMenue .active{color:black;}
+#slider #Contact #ContactMenue .active a{color:black;}
+a:hover{text-decoration: none;color:black;}
+a:visited{color:rgb(180,180,180);}
+a:active{color:black);}
+#AboutWrap{transition:all 0.1s ease-out;cursor: pointer;}
+h2{font-size:18px;font-weight:400;color:#575757;margin-top:20px;margin-left:40px;}
+#UlMenue li{width:103px;float:left;list-style:none;margin-top:10px;vertical-align:top;color:#838383;}
+h2:hover{color:black;}
+#UlMenue li:hover{color:black;}

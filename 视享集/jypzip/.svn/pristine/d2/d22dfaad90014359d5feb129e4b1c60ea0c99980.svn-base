@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/index6.css">
+	<script type="text/javascript" src="jquery1.js"></script>
+	<script type="text/javascript" src="jquery.easing.1.3.js"></script>	
+		
+</head>
+<body>
+	<div id="windowloading">
+		<div id="wld">
+			<img src="images/loading.gif">
+		</div>
+	</div>
+	<div id="body" style="display:none;">
+		<div id="slider" class="clearfix"class="animated fadeInLeft">
+		<div id="logoImg">
+			<img id="btns" src="img/logo.png" style="position: absolute;top:50px;left:80px;">
+			<img src="img/233.png" style="position: absolute;top:20px;right:10px;">
+		</div>
+		<div id="Cases">
+			<h3 id="btn"><a href="index1.html">案例 Cases</a></h3>
+			<ul id="CasesMenue">
+				<li>平面</li>
+				<li>移动端</li>
+				<li>网页设计</li>
+				<li>动画/手绘</li>
+			</ul>
+		</div>
+		<div id="Contact">
+			<ul id="ContactMenue">
+				<li id="TEXT"><a id="az" href="index2.html">文字Blog</a></li>
+				<li id="About"><a href="index3.html">关于About</a></li>
+				<li id="Service"><a href="index4.html">服务/报价 Service</a></li>
+				<li id="ContactWe"><a href="index5.html">联系我们 Contact</a></li>
+				<li id="Liinks"><a href="index6.html">友情链接 Liinks</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="ServiceWrap" style="position: absolute;left:40px;">
+		<h1>友情链接 Links</h1>
+		<div id="content">
+			<ul id="contentMenue" style="margin-top:20px;">
+				<li style="margin-left:40px;margin-top:-2px;height:13px;width:120px;" id="ConentAbout" class="btn"><img src="img/101.png">友情链接</li>
+				<li id="People"><img src="img/102.png">Julyday</li>
+				<li><img src="img/103.png">21 3月 2016</li>
+				<li style="margin-top:-1px;"><img src="img/104.png">0 Comments</li>
+			</ul>
+			<div style="width:100%;height:400px;margin-top:40px;margin-left:40px;">
+				<p style="color:#535353;font-size:12px;">如有项目合作需求,请将大概要求发邮件至<span style="color:red;">jpgzip@163.com,</span>审核通过后会及时给您发反馈邮件并更新至此</p>
+				<table border="0" width="900" cellspacing="0" cellpadding="0">
+					<tbody>
+						<tr style="border-top:1px solid #e9e9e9;">
+							<td align="center" valign="middle" height="84">
+								<a href=""><img src="images/Z-1.jpg"></a>
+							</td>
+							<td align="center" valign="middle">
+								<a href="http://www.zhisheji.com/"><img src="images/11.jpg"></a>
+							</td>
+							<td align="center" valign="middle">
+								<a href="http://www.68design.net/"><img src="images/Z.jpg"></a>
+							</td>
+							<td align="center" valign="middle">
+								<a href="http://www.uid123.com/"><img src="images/Z-3.jpg"></a>
+							</td>
+							<td align="center" valign="middle">
+								<a href=""><img src="images/Z-2.jpg"></a>
+							</td>
+							<td align="center" valign="middle">
+								<a href=""><img src="images/Z-4.jpg"></a>
+							</td>
+						</tr>
+						<tr style="border-top:1px solid #e9e9e9;">
+							<td align="center" valign="middle" height="84">
+								<a href=""><img src="images/Z-2.jpg"></a>
+							</td>
+							<td align="center" valign="middle">
+								<a href=""><img src="images/Z-4.jpg"></a>
+							</td>
+							<td align="center" valign="middle">
+								<a href=""><img src="images/Z-4.jpg"></a>
+							</td>
+							<td align="center" valign="middle">
+								<a href=""><img src="images/Z-2.jpg"></a>
+							</td>
+							<td align="center" valign="middle">
+								<a href=""><img src="images/Z-2.jpg"></a>
+							</td>
+							<td align="center" valign="middle">
+								<a href=""><img src="images/Z-4.jpg"></a>
+							</td>
+						</tr>
+						<tr style="border-top:1px solid #e9e9e9;">
+							<td align="center" valign="middle" height="84">
+								<a href="http://www.ygee.net/"><img src="images/22.jpg"></a>
+							</td>
+							<td align="center" valign="middle">
+								<a href=""></a>
+							</td>
+							<td align="center" valign="middle">
+								<a href=""></a>
+							</td>
+							<td align="center" valign="middle">
+								<a href=""></a>
+							</td>
+							<td align="center" valign="middle">
+								<a href=""></a>
+							</td>
+							<td align="center" valign="middle">
+								<a href=""></a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div id="CommentsWrap">
+				<h1>Comments(0)</h1>
+				<p style="margin-left:40px;color:#6b6b6b;">There are not comments on tthis post yet.Be the first one!</p>
+			</div>
+			<div id="ADD" style="margin-top:60px;">
+				<h1>Add Your Comment</h1>
+				<p style="margin-left:40px;color: #6b6b6b;">You must be logged in to post a comment.</p>
+			</div>
+	</div>
+	</div>
+	
+</body>
+</html>
+<script type="text/javascript" src="index6.js"></script>

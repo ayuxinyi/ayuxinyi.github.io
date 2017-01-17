@@ -1,0 +1,42 @@
+html,body{width:100%;height:100%;}
+#part3d-wrap{position: relative;left:40px;transition:all 0.1s ease-out;}
+#part3d-box{position:relative;width:100%;height:140%;}
+.modular{width:20%;float:left;display:inline-block;max-height:255px;max-width:340px;cursor: pointer;}
+.modularA{display: inline-block;width: 100%;height:100%;transform-style: preserve-3d;transition: all .2s ease-out;position: relative;-webkit-backface-visibility:hidden;max-height:255px;max-width:340px;}
+.m1{background:red;width: 100%;height: 100%;max-width:340px;max-height: 255px;}
+.m2{width: 100%;height: 100%;max-width:340px;max-height:255px;position:absolute;}
+.m1 img{width:100%;}
+.m2 h3{text-align:center;text-transform: uppercase;transform:rotateZ(-180deg) rotateY(-180deg);color:black;font-size:15px;font-weight:700;}
+.m2 p{text-align:center;text-transform: uppercase;transform:rotateZ(-180deg) rotateY(-180deg);color:black;font-size:13px;font-weight: 400;opacity:.6;margin-top:4.5rem;}
+.m5{background: rgb(106,139,151);}
+.m6{background: rgb(222,29,88);}
+.m7{background: rgb(84,29,122);}
+.m8{background: rgb(89,151,165);}
+.m9{background: rgb(99,115,155);}
+.m10{background: rgb(104,84,170);}
+.m11{background: rgb(167,87,97);}
+.m12{background: rgb(99,94,85);}
+.m13{background: rgb(170,84,102);}
+.m14{background: rgb(9,91,173);}
+.m15{background: rgb(118,128,136);}
+.m16{background: rgb(145,154,100);}
+.m17{background: rgb(246,172,8);}
+.m18{background: rgb(144,102,57);}
+.m19{background: rgb(62,88,180);}
+.m20{background: rgb(163,103,91);}
+.m21{background: rgb(196,39,67);}
+.m22{background: rgb(75,91,137);}
+.m23{background: rgb(153,126,102);}
+.m24{background: rgb(150,135,104);}
+.m25{background: rgb(190,62,34);}
+.m26{background: rgb(194,31,103);}
+#slider{width:300px;height:100%;position:fixed;top:0;left:-260px;background:rgb(239,239,239);transition:all 0.1s ease-out;cursor: pointer;}
+#slider #Cases h3{position:absolute;top:160px;left:80px;font-size:18px;color:black;font-weight:700;}
+#slider #Cases #CasesMenue{position:absolute;top:200px;left:100px;}
+#slider #Cases #CasesMenue li,#slider #Contact #ContactMenue li{color:rgb(180,180,180);list-style:none;margin-bottom:20px;width:240px;height:15px;font-size:15px;font-weight:400;}
+#slider #Contact #ContactMenue{position:absolute;top:350px;left:100px;}
+#slider #Cases #CasesMenue .active{color:black;}
+#slider #Contact #ContactMenue .active a{color:black;}
+a:hover{text-decoration: none;color:black;}
+a:visited{color:rgb(180,180,180);}
+a:active{color:black);}

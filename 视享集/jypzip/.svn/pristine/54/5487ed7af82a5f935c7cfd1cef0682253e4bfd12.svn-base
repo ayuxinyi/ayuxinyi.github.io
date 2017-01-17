@@ -1,0 +1,4 @@
+@media screen and (min-width: 1040px) and (max-width: 1410px){
+			html,body{width:100%;height:100% !important;}
+			.modular{width:25% !important;}
+	}
