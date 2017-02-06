@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+     <link rel="stylesheet" href="css/iconfont.css" />
+    <script src="js/mui.min.js"></script>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <style>
+    .mui-bar-nav{background:#dc3137;}
+    .mui-bar-nav .mui-title img{width:20%;margin-top:10px;}
+    .typeLine{background: white;height:40px;}
+    .typeLine a{color:black;line-height: 40px;margin-left:4.5%;}
+    .typeLine a:hover{color:#DC3137;}
+    .pageContent{display: none;}
+    #videoListTable video{width:100%;}
+    #changeHeader{width:100%;height:400px;}
+    #headerImg{border-radius: 50%;width:20%;margin-left:40%;margin-top:5%;height: 20%;}
+    #changeHeader p{text-align: center;color: gray;}
+    </style>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init({statusBarBackground:"#dc3137"});
+      	//mui.playReady   相当于原生的viewDidLoad方法
+      	//视图已经加载起来的方法
+      	mui.plusReady(function(){
+ 			plus.navigator.setStatusBarStyle("UIStatusBarStyleBlackOpaque");
+ 			mui("#changeHeader").on("tap","#headerImg",function(event,error){
+ 				if(error){
+ 					alert("调用相册失败");
+ 				}else{
+ 					//获取到手机的相机系统
+ 					 var camera = plus.camera.getCamera();
+ 					 //捕捉图片
+ 					 camera.captureImage(function(path){
+ 					 	//转换路径,参数的path 是相机里面的路径,是一个虚拟的路径,需要转换为实际的io路径
+ 					 	plus.io.resolveLocalFileSystemURL(path,function(entry){
+ 					 		//io路径转化为本地路径
+ 					 		var finalPath = entry.toLocalURL();
+ 					 		$("#headerImg").attr("src",finalPath);
+ 					 	});
+ 					 })
+ 				}
+ 			});
+ 			mui(".mui-bar-tab").on("tap",".mui-tab-item",function(error){
+ 				$(".pageContent").css({display:"none"});
+ 				$(".pageContent").eq($(this).index()).css({display:"block"});
+ 			});
+ 			//网络请求轮播图数据
+ 			mui.ajax("http://c.m.163.com/nc/article/headline/T1348647853363/0-20.html?from=toutiao&passport=&devId=OPdeGFsVSojY0ILFe6009pLR%2FMsg7TLJv5TjaQQ6Hpjxd%2BaWU4dx4OOCg2vE3noj&size=20&version=5.5.3&spever=false&net=wifi&lat=&lon=&ts=1456985286&sign=%2BY9lXIDh3W7j69unWYNEiSG3So2sMceBy%2B%2FiFf2ZfHh48ErR02zJ6%2FKXOnxX046I&encryption=1&canal=appstore",{
+ 				dataType:"json",
+ 				type:"get",
+ 				timeout:1000,
+ 				success:function(data){
+ 					handaleSliderData(data);
+ 				},
+ 				error:function(error){
+ 					alert("轮播图数据请求失败");
+ 				}
+ 			});
+ 			//请求新闻列表
+ 			mui.ajax("http://c.m.163.com/nc/article/headline/T1348647853363/30-20.html?from=toutiao&passport=&devId=OPdeGFsVSojY0ILFe6009pLR%2FMsg7TLJv5TjaQQ6Hpjxd%2BaWU4dx4OOCg2vE3noj&size=20&version=5.5.3&spever=false&net=wifi&lat=&lon=&ts=1456985878&sign=oDwq9mBweKUtUuiS%2FPvB015PyTDKHSxuyuVq2076XQB48ErR02zJ6%2FKXOnxX046I&encryption=1&canal=appstore",{
+ 				dataType:"json",
+ 				type:"get",
+ 				timeout:1000,
+ 				success:function(data){
+ 					handleNewsListData(data);
+ 				},
+ 				error:function(error){
+ 					alert("新闻列表请求失败");
+ 				}
+ 			});
+      	mui("#scroll").scroll();
+      	//请求视频列表
+      	mui.ajax("http://c.3g.163.com/nc/video/home/10-10.html",{
+  			dataType:"json",
+			type:"get",
+			timeout:1000,
+			success:function(data){
+				handleVideoListData(data);
+			},
+			error:function(error){
+				alert("视频列表请求失败");
+			}
+      	});
+      	});//这是plusReady结束
+      	
+      	//处理轮播图数据
+      	function handaleSliderData(data){
+      		var dataArray = data["T1348647853363"][0]["ads"];
+      		var item1 = $('<div class="mui-slider-item"><a href="#"><img src='+dataArray[dataArray.length-1].imgsrc+' /></a></div>');
+      			$("#SliderGroupDiv").append(item1);
+      		for(var i = 0;i<dataArray.length;i++){
+      			var item = $('<div class="mui-slider-item"><a href="#"><img src='+dataArray[i].imgsrc+' /></a></div>');
+      			$("#SliderGroupDiv").append(item);
+      			var aPoint = $("<div class='mui-indicator'></div>");
+      			$("#sliderPageDiv").append(aPoint);
+      		}
+      		var item2= $('<div class="mui-slider-item"><a href="#"><img src='+dataArray[0].imgsrc+' /></a></div>');
+      		$("#SliderGroupDiv").append(item2);
+      		//让轮播图 自动播放
+      		mui(".mui-slider").slider({
+      			interval:1000
+      		});
+      	}
+      	//处理列表数据
+      	function handleNewsListData(data){
+      		var dataArray = data["T1348647853363"];
+      		for(var i =0;i<dataArray.length;i++){
+      			var cell=$("<li class='mui-table-view-cell mui-media'><a href='#'><img class='mui-media-object mui-pull-left' src='"+dataArray[i].img+"'><div class='mui-media-body'>"+dataArray[i].source+"<p class='mui-ellipsis'>"+dataArray[i].title+"</p></div></a></li>");
+      			$("#newsListTable").append(cell);
+      		}
+      	}
+      	//处理视频数据
+      	function handleVideoListData(data){
+      		var dataArray = data.videoList;
+      		for(var i =0;i<dataArray.length;i++){
+      			var cell = $('<li class="mui-table-view-cell"><div><strong>'+dataArray[i].title+'</strong><video poster='+dataArray[i].cover+'><source src='+dataArray[i].mp4_url+'></source></video></div></li>');
+      			$("#videoListTable").append(cell);
+      		}
+      	};
+    </script>
+    
+</head>
+<body>
+	<nav class="mui-bar mui-bar-nav">
+		<h1 class="mui-title">
+			<img src="images/navbar_netease@2x.png"/>
+		</h1>
+	</nav>
+	<nav class="mui-bar mui-bar-tab">
+		<a href="#" class="mui-tab-item mui-active" tabindex="0">
+			<span class="mui-icon iconfont icon-xinwen"></span>
+			<span class="mui-tab-label">新闻</span>
+		</a>
+		<a href="#" class="mui-tab-item" tabindex="1">
+			<span class="mui-icon iconfont icon-yuedu"></span>
+			<span class="mui-tab-label">阅读</span>
+		</a>
+		<a href="#" class="mui-tab-item" tabindex="2">
+			<span class="mui-icon iconfont icon-shipin"></span>
+			<span class="mui-tab-label">视频</span>
+		</a>
+		<a href="#" class="mui-tab-item" tabindex="3">
+			<span class="mui-icon iconfont icon-wode"></span>
+			<span class="mui-tab-label">我的</span>
+		</a>
+	</nav>
+	<div class="mui-content mui-scroll-wrapper" id="scroll">
+		<div class="mui-scroll">
+			<!--第一个页面开始-->
+		<div class="pageContent" style="display: block;">
+			<!--分类条-->
+			<div class="typeLine">
+				<a href="#">头条</a>
+				<a href="#">热点</a>
+				<a href="#">汽车</a>
+				<a href="#">娱乐</a>
+				<a href="#">体育</a>
+				<a href="#"><img src="images/comment_arrow_down@2x.png" alt="" /></a>
+			</div>
+			<!--轮播图-->
+			<div class="mui-slider">
+				<div class="mui-slider-group mui-slider-loop" id="SliderGroupDiv">
+					
+				</div>
+				<div class="mui-slider-indicator" id="sliderPageDiv">
+					
+				</div>
+			</div>
+			
+			<ul class="mui-table-view" id="newsListTable">
+				
+			</ul>
+		</div>
+		<!--第一个页面结束-->
+		<!--第二个页面开始-->
+		<div class="pageContent">
+			此页面已经省略
+		</div>
+		<!--第二个页面结束-->
+		<!--第三个页面-->
+		<div class="pageContent">
+			<ul clas	s="mui-table-view" id="videoListTable">
+				
+			</ul>
+		</div>
+		<!--第四个页面-->
+		<div class="pageContent">
+			<div id="changeHeader">
+				<img src="images/login_username_icon@2x.png" alt="" id="headerImg" />
+				<p>更换头像</p>
+			</div>
+		</div>
+	</div>
+		
+	</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+
+@font-face {font-family: "iconfont";
+  src:url('../fonts/iconfont.ttf?t=1484276039067') format('truetype'); /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+}
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-wode:before { content: "\e66d"; }
+
+.icon-xinwen:before { content: "\e6cb"; }
+
+.icon-shipin:before { content: "\e687"; }
+
+.icon-yuedu:before { content: "\e637"; }
+
